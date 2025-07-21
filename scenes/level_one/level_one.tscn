@@ -240,3 +240,26 @@ tile_set = SubResource("TileSet_vgw7g")
 
 [node name="Player" parent="." instance=ExtResource("2_l8j5s")]
 position = Vector2(297, 418)
+
+[node name="Lesson" type="Node" parent="."]
+
+[node name="python-high-level" type="Label" parent="."]
+z_index = -2
+texture_filter = 2
+offset_left = 181.0
+offset_top = 425.0
+offset_right = 413.0
+offset_bottom = 500.0
+text = "Python is a high level programming language. 
+"
+autowrap_mode = 3
+
+[node name="high-level-explain" type="Label" parent="."]
+z_index = -2
+offset_left = 449.0
+offset_top = 410.0
+offset_right = 632.0
+offset_bottom = 485.0
+theme_override_font_sizes/font_size = 12
+text = "That means you tell the computer what to do in a way humans can easily read."
+autowrap_mode = 3
