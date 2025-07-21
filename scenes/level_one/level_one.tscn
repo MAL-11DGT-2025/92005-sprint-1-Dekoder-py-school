@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://b77kj2iicntg1"]
+[gd_scene load_steps=6 format=4 uid="uid://b77kj2iicntg1"]
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_ptc67"]
 [ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_l8j5s"]
+[ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/LevelTransiton/level_transition.tscn" id="3_l8j5s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogq8d"]
 texture = ExtResource("1_ptc67")
@@ -263,3 +264,6 @@ offset_bottom = 485.0
 theme_override_font_sizes/font_size = 12
 text = "That means you tell the computer what to do in a way humans can easily read."
 autowrap_mode = 3
+
+[node name="LevelTransition" parent="." instance=ExtResource("3_l8j5s")]
+position = Vector2(939, 351)
