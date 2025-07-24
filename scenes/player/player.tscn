@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7jtkf7digme3"]
+[gd_scene load_steps=5 format=3 uid="uid://b7jtkf7digme3"]
 
 [ext_resource type="Texture2D" uid="uid://b2b811jorlu46" path="res://assets/tilemap-characters.png" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://sya5slp07mhr" path="res://scenes/player/player.gd" id="1_rkbax"]
+[ext_resource type="AudioStream" uid="uid://brh3hj6vr6s0g" path="res://assets/jump.wav" id="3_gmlin"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkbax"]
 size = Vector2(14, 18)
@@ -23,3 +24,6 @@ shape = SubResource("RectangleShape2D_rkbax")
 zoom = Vector2(4, 4)
 process_callback = 0
 position_smoothing_enabled = true
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gmlin")
