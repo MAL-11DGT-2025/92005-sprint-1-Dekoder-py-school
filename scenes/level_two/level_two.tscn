@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://djlca6lv0t2tw"]
+[gd_scene load_steps=7 format=4 uid="uid://djlca6lv0t2tw"]
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_d5u3y"]
 [ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_duqq2"]
+[ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="3_d5u3y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4c4t"]
 texture = ExtResource("1_d5u3y")
@@ -232,6 +233,9 @@ tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_p4c4t")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_duqq2"]
+distance = -693.0
+
 [node name="level_two" type="Node"]
 
 [node name="Midground" type="TileMapLayer" parent="."]
@@ -252,3 +256,8 @@ offset_right = 413.0
 offset_bottom = 500.0
 text = "Welcome to level 2!"
 autowrap_mode = 3
+
+[node name="Killzone" parent="." instance=ExtResource("3_d5u3y")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+shape = SubResource("WorldBoundaryShape2D_duqq2")
