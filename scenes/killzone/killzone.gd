@@ -1,16 +1,18 @@
 extends Area2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+@onready var timer: Timer = $Timer
 
 
 func _on_body_entered(body: Node2D) -> void:
-	# kill player on contact (reload level)
+	# prevent colliding again
+	body.set_process(false)
+	body.get_node("CollisionShape2D").queue_free()
+	
+	# slow down the game
+	Engine.time_scale = 0.2
+	timer.start()
+
+func _on_timer_timeout() -> void:
+	# after time ends, reset time scale and reload level
+	Engine.time_scale = 1.0
 	get_tree().reload_current_scene()
