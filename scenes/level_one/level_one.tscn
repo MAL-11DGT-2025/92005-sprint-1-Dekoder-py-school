@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://b77kj2iicntg1"]
+[gd_scene load_steps=8 format=4 uid="uid://b77kj2iicntg1"]
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_ptc67"]
 [ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_l8j5s"]
-[ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/LevelTransiton/level_transition.tscn" id="3_l8j5s"]
+[ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/level_transistion/level_transition.tscn" id="3_l8j5s"]
+[ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="4_ogq8d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l8j5s"]
 texture = ExtResource("1_ptc67")
@@ -233,6 +234,9 @@ tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_l8j5s")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vgw7g"]
+distance = -132.0
+
 [node name="LevelOne" type="Node"]
 
 [node name="Midground" type="TileMapLayer" parent="."]
@@ -268,3 +272,9 @@ autowrap_mode = 3
 [node name="LevelTransition" parent="." instance=ExtResource("3_l8j5s")]
 position = Vector2(939, 351)
 next_level_scene = "res://scenes/level_two/level_two.tscn"
+
+[node name="Killzone" parent="." instance=ExtResource("4_ogq8d")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 635)
+shape = SubResource("WorldBoundaryShape2D_vgw7g")
