@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1kfkrl1d3bnm"]
 
-[ext_resource type="Script" uid="uid://dsfxv34x6xigv" path="res://scenes/LevelTransiton/level_transition.gd" id="1_jjkk8"]
+[ext_resource type="Script" uid="uid://dsfxv34x6xigv" path="res://scenes/level_transistion/level_transition.gd" id="1_jjkk8"]
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_obhg6"]
 [ext_resource type="AudioStream" uid="uid://cba71jo1g6tuy" path="res://assets/levelUp.wav" id="3_066do"]
 
