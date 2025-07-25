@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://b77kj2iicntg1"]
+[gd_scene load_steps=11 format=4 uid="uid://b77kj2iicntg1"]
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_ptc67"]
 [ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_l8j5s"]
 [ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/level_transistion/level_transition.tscn" id="3_l8j5s"]
 [ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="4_ogq8d"]
 [ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin/coin.tscn" id="5_vgw7g"]
+[ext_resource type="AudioStream" uid="uid://cba71jo1g6tuy" path="res://assets/levelUp.wav" id="6_7qh7y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l8j5s"]
 texture = ExtResource("1_ptc67")
@@ -238,6 +239,9 @@ sources/1 = SubResource("TileSetAtlasSource_l8j5s")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vgw7g"]
 distance = -132.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_v0lfl"]
+radius = 7.0
+
 [node name="LevelOne" type="Node"]
 
 [node name="Midground" type="TileMapLayer" parent="."]
@@ -287,3 +291,11 @@ position = Vector2(333, 493)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("5_vgw7g")]
 position = Vector2(630, 494)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_v0lfl")
+
+[node name="LevelUpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7qh7y")
