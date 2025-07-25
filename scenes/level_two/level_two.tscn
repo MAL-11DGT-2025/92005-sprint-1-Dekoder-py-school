@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://djlca6lv0t2tw"]
+[gd_scene load_steps=8 format=4 uid="uid://djlca6lv0t2tw"]
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_d5u3y"]
 [ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_duqq2"]
 [ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="3_d5u3y"]
+[ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin/coin.tscn" id="4_duqq2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4c4t"]
 texture = ExtResource("1_d5u3y")
@@ -261,3 +262,8 @@ autowrap_mode = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 shape = SubResource("WorldBoundaryShape2D_duqq2")
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource("4_duqq2")]
+position = Vector2(158, 534)
