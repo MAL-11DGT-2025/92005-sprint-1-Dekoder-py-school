@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://doq58swoolqcp"]
+
+[ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_yr0ns"]
+[ext_resource type="Script" uid="uid://34a5ho84s3en" path="res://scenes/coin/coin.gd" id="2_u0637"]
+[ext_resource type="AudioStream" uid="uid://dpe48tf4luw58" path="res://assets/pickupCoin.wav" id="3_5vuvm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vuvm"]
+atlas = ExtResource("1_yr0ns")
+region = Rect2(209, 133, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f38ba"]
+atlas = ExtResource("1_yr0ns")
+region = Rect2(228, 133, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gtla7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vuvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f38ba")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5vuvm"]
+radius = 6.0
+
+[sub_resource type="Animation" id="Animation_8afc0"]
+resource_name = "pickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CoinSound:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ifod"]
+_data = {
+&"pickup": SubResource("Animation_8afc0")
+}
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("2_u0637")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gtla7")
+autoplay = "default"
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5vuvm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0ifod")
+}
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5vuvm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
