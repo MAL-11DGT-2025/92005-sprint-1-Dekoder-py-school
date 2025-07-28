@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cba71jo1g6tuy" path="res://assets/levelUp.wav" id="3_066do"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_066do"]
-radius = 7.0
+radius = 6.0
 
 [node name="LevelTransition" type="Sprite2D"]
 texture = ExtResource("1_obhg6")
