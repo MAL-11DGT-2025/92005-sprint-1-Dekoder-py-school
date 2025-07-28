@@ -252,10 +252,10 @@ position = Vector2(297, 418)
 z_index = -2
 texture_filter = 2
 offset_left = 181.0
-offset_top = 425.0
-offset_right = 413.0
-offset_bottom = 500.0
-text = "Welcome to level 2!"
+offset_top = 415.0
+offset_right = 450.0
+offset_bottom = 516.0
+text = "Python is an interpereted language, so it's translated to low level machine code at runtime."
 autowrap_mode = 3
 
 [node name="Killzone" parent="." instance=ExtResource("3_d5u3y")]
