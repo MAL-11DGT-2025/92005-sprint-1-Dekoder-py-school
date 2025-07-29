@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://djlca6lv0t2tw"]
+[gd_scene load_steps=10 format=4 uid="uid://djlca6lv0t2tw"]
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_d5u3y"]
 [ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_duqq2"]
 [ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="3_d5u3y"]
 [ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin/coin.tscn" id="4_duqq2"]
 [ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/level_transistion/level_transition.tscn" id="5_m7ag7"]
+[ext_resource type="PackedScene" uid="uid://se3sxnql1uyy" path="res://scenes/hud/hud.tscn" id="6_p4c4t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4c4t"]
 texture = ExtResource("1_d5u3y")
@@ -271,3 +272,7 @@ position = Vector2(153, 533)
 
 [node name="LevelTransition" parent="." instance=ExtResource("5_m7ag7")]
 position = Vector2(1061, 368)
+
+[node name="HUD" parent="." instance=ExtResource("6_p4c4t")]
+
+[connection signal="body_entered" from="Coins/Coin" to="HUD" method="_on_coin_body_entered"]

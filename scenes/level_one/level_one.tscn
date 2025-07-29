@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://b77kj2iicntg1"]
+[gd_scene load_steps=12 format=4 uid="uid://b77kj2iicntg1"]
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_ptc67"]
 [ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_l8j5s"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="4_ogq8d"]
 [ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin/coin.tscn" id="5_vgw7g"]
 [ext_resource type="AudioStream" uid="uid://cba71jo1g6tuy" path="res://assets/levelUp.wav" id="6_7qh7y"]
+[ext_resource type="PackedScene" uid="uid://se3sxnql1uyy" path="res://scenes/hud/hud.tscn" id="7_v0lfl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l8j5s"]
 texture = ExtResource("1_ptc67")
@@ -290,7 +291,7 @@ shape = SubResource("WorldBoundaryShape2D_vgw7g")
 position = Vector2(333, 493)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("5_vgw7g")]
-position = Vector2(630, 494)
+position = Vector2(631, 494)
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -299,3 +300,8 @@ shape = SubResource("CircleShape2D_v0lfl")
 
 [node name="LevelUpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7qh7y")
+
+[node name="HUD" parent="." instance=ExtResource("7_v0lfl")]
+
+[connection signal="body_entered" from="Coins/Coin" to="HUD" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin2" to="HUD" method="_on_coin_body_entered"]

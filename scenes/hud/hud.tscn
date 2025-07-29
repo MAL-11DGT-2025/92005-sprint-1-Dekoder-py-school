@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://se3sxnql1uyy"]
+
+[ext_resource type="Script" uid="uid://dkxdmwqg7185u" path="res://scripts/hud.gd" id="1_48c2t"]
+[ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="2_cgeww"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c45xl"]
+atlas = ExtResource("2_cgeww")
+region = Rect2(209, 133, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0bx4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c45xl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_48c2t")
+
+[node name="CoinCount" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.165799
+anchor_bottom = 0.195988
+offset_left = 31.0
+offset_top = 26.0
+offset_right = 74.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 40
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinIcon" type="AnimatedSprite2D" parent="."]
+position = Vector2(117, 55)
+scale = Vector2(6.11111, 5.94444)
+sprite_frames = SubResource("SpriteFrames_0bx4p")
