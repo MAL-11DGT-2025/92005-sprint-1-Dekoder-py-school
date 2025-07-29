@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cighgi61r70q7"]
+
+[node name="MovingPlatform" type="Sprite2D"]
+region_enabled = true
+region_rect = Rect2(288, 0, 18, 18)
+
+[node name="CollisionShape" type="CollisionShape2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
