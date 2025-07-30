@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var next_level_scene := "res://scenes/level_one/level_one.tscn"
+@export var next_level_scene := "res://scenes/levels/level_one.tscn"
 @onready var level_up_sound := $LevelUpSound
 
 
