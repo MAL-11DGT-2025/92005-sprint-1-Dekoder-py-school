@@ -309,6 +309,9 @@ shape = SubResource("WorldBoundaryShape2D_duqq2")
 [node name="Coin" parent="Coins" instance=ExtResource("4_5qm6s")]
 position = Vector2(153, 533)
 
+[node name="Coin2" parent="Coins" instance=ExtResource("4_5qm6s")]
+position = Vector2(694, 434)
+
 [node name="LevelTransition" parent="." instance=ExtResource("5_chx1n")]
 position = Vector2(1061, 368)
 next_level_scene = "res://scenes/levels/level_three.tscn"
@@ -325,3 +328,4 @@ libraries = {
 autoplay = "move"
 
 [connection signal="body_entered" from="Coins/Coin" to="HUD" method="_on_coin_body_entered"]
+[connection signal="body_entered" from="Coins/Coin2" to="HUD" method="_on_coin_body_entered"]
