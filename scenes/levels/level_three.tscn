@@ -310,6 +310,7 @@ libraries = {
 autoplay = "move"
 
 [node name="TempEnd" type="Label" parent="."]
+texture_filter = 2
 offset_left = 1021.0
 offset_top = 337.0
 offset_right = 1118.0
