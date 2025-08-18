@@ -29,6 +29,7 @@ offset_left = 31.0
 offset_top = 26.0
 offset_right = 74.0
 offset_bottom = 49.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.858824)
 theme_override_font_sizes/font_size = 40
 text = "0"
 metadata/_edit_use_anchors_ = true
