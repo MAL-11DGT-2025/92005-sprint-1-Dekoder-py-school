@@ -9,12 +9,8 @@ func _ready() -> void:
 	coin_count.text = str(coins)
 	
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
+# when coin collected
 func _on_coin_body_entered(body: Node2D) -> void:
+	# increase coin counter
 	coins += 1
 	coin_count.text = str(coins)

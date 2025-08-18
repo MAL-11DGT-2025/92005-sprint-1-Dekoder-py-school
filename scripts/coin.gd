@@ -4,7 +4,7 @@ extends Area2D
 
 
 
-
+# when player walks into coin do pickup (sound, delete)
 func _on_body_entered(body: Node2D) -> void:
 	animation_player.play("pickup")
 	

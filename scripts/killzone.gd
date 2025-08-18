@@ -5,10 +5,9 @@ extends Area2D
 
 
 func _on_body_entered(body: Node2D) -> void:
-	# Disable player collision - player falls through map
+	# Disable player collision so the player falls through any objects
 	body.set_process(false)
 	body.get_node("CollisionShape2D").queue_free()
-	
 	
 	
 	# Slow down the game
@@ -17,7 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 	# Play death sound
 	death_sound.play()
 
-	# After sound ends, start a short timer
+	# After sound ends, start a short timer before reloadinng
 	await death_sound.finished
 	timer.start()
 
