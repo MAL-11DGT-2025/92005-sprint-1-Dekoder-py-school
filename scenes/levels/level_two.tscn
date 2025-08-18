@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_q0tex"]
 [ext_resource type="Texture2D" uid="uid://debv0l50q3w42" path="res://assets/tilemap-backgrounds.png" id="2_gqryv"]
-[ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_ivkd0"]
-[ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="3_gqryv"]
-[ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin/coin.tscn" id="4_5qm6s"]
-[ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/level_transistion/level_transition.tscn" id="5_chx1n"]
-[ext_resource type="PackedScene" uid="uid://se3sxnql1uyy" path="res://scenes/hud/hud.tscn" id="6_oei0b"]
-[ext_resource type="PackedScene" uid="uid://ctlqgcouybjuw" path="res://scenes/platform/platform.tscn" id="7_fo2p1"]
+[ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player.tscn" id="2_ivkd0"]
+[ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone.tscn" id="3_gqryv"]
+[ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin.tscn" id="4_5qm6s"]
+[ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/level_transition.tscn" id="5_chx1n"]
+[ext_resource type="PackedScene" uid="uid://se3sxnql1uyy" path="res://scenes/hud.tscn" id="6_oei0b"]
+[ext_resource type="PackedScene" uid="uid://ctlqgcouybjuw" path="res://scenes/platform.tscn" id="7_fo2p1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4c4t"]
 texture = ExtResource("1_q0tex")

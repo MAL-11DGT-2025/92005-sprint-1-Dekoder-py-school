@@ -2,11 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_7ry6i"]
 [ext_resource type="Texture2D" uid="uid://debv0l50q3w42" path="res://assets/tilemap-backgrounds.png" id="2_7ry6i"]
-[ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_vmov0"]
-[ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="3_7s1bx"]
-[ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin/coin.tscn" id="4_jbu4w"]
-[ext_resource type="PackedScene" uid="uid://se3sxnql1uyy" path="res://scenes/hud/hud.tscn" id="6_31lil"]
-[ext_resource type="PackedScene" uid="uid://ctlqgcouybjuw" path="res://scenes/platform/platform.tscn" id="7_4pegr"]
+[ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player.tscn" id="2_vmov0"]
+[ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone.tscn" id="3_7s1bx"]
+[ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin.tscn" id="4_jbu4w"]
+[ext_resource type="PackedScene" uid="uid://se3sxnql1uyy" path="res://scenes/hud.tscn" id="6_31lil"]
+[ext_resource type="PackedScene" uid="uid://ctlqgcouybjuw" path="res://scenes/platform.tscn" id="7_4pegr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p4c4t"]
 texture = ExtResource("1_7ry6i")

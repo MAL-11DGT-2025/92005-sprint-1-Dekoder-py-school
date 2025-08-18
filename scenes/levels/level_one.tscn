@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://byfhan2k428p4" path="res://assets/tilemap.png" id="1_623cv"]
 [ext_resource type="Texture2D" uid="uid://debv0l50q3w42" path="res://assets/tilemap-backgrounds.png" id="1_u6gdm"]
-[ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player/player.tscn" id="2_u6gdm"]
-[ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/level_transistion/level_transition.tscn" id="3_a1u8d"]
-[ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone/killzone.tscn" id="4_8ri5e"]
-[ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin/coin.tscn" id="5_1057k"]
+[ext_resource type="PackedScene" uid="uid://b7jtkf7digme3" path="res://scenes/player.tscn" id="2_u6gdm"]
+[ext_resource type="PackedScene" uid="uid://b1kfkrl1d3bnm" path="res://scenes/level_transition.tscn" id="3_a1u8d"]
+[ext_resource type="PackedScene" uid="uid://cf14ufgngavb4" path="res://scenes/killzone.tscn" id="4_8ri5e"]
+[ext_resource type="PackedScene" uid="uid://doq58swoolqcp" path="res://scenes/coin.tscn" id="5_1057k"]
 [ext_resource type="AudioStream" uid="uid://cba71jo1g6tuy" path="res://assets/levelUp.wav" id="6_cxxkw"]
-[ext_resource type="PackedScene" uid="uid://se3sxnql1uyy" path="res://scenes/hud/hud.tscn" id="7_ajekx"]
-[ext_resource type="PackedScene" uid="uid://ctlqgcouybjuw" path="res://scenes/platform/platform.tscn" id="8_6t0u7"]
+[ext_resource type="PackedScene" uid="uid://se3sxnql1uyy" path="res://scenes/hud.tscn" id="7_ajekx"]
+[ext_resource type="PackedScene" uid="uid://ctlqgcouybjuw" path="res://scenes/platform.tscn" id="8_6t0u7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a1u8d"]
 texture = ExtResource("1_u6gdm")
