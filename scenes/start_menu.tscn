@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2vi73t1t3vxr"]
+[gd_scene load_steps=4 format=3 uid="uid://c2vi73t1t3vxr"]
 
 [ext_resource type="Script" uid="uid://twsm62356reh" path="res://scripts/start_menu.gd" id="1_m7x51"]
 [ext_resource type="Script" uid="uid://drvs6yq7mquqt" path="res://scripts/start_button.gd" id="1_ouf4f"]
+[ext_resource type="Script" uid="uid://tjxvc5178ifa" path="res://scripts/quit_button.gd" id="3_m7x51"]
 
 [node name="StartMenu" type="Node2D"]
 script = ExtResource("1_m7x51")
@@ -14,14 +15,27 @@ offset_bottom = 295.0
 theme_override_font_sizes/font_size = 46
 text = "Platformer Game"
 
-[node name="StartButton" type="Button" parent="."]
+[node name="ButtonContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StartButton" type="Button" parent="ButtonContainer"]
 texture_filter = 2
-offset_right = 93.0
-offset_bottom = 58.0
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 36
 text = "Start"
 script = ExtResource("1_ouf4f")
 
-[connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[node name="QuitButton" type="Button" parent="ButtonContainer"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 36
+text = "Quit"
+script = ExtResource("3_m7x51")
+
+[connection signal="pressed" from="ButtonContainer/StartButton" to="ButtonContainer/StartButton" method="_on_pressed"]
+[connection signal="pressed" from="ButtonContainer/QuitButton" to="ButtonContainer/QuitButton" method="_on_pressed"]
