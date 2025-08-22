@@ -336,7 +336,7 @@ offset_left = 181.0
 offset_top = 415.0
 offset_right = 450.0
 offset_bottom = 516.0
-theme_override_colors/font_color = Color(0.192157, 0.286275, 0.545098, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.631373)
 text = "Python is an interpereted language, so it's translated to low level machine code at runtime."
 autowrap_mode = 3
 
