@@ -12,5 +12,5 @@ func _ready() -> void:
 	button_container.position = get_center(button_container)
 	game_title.position = get_center(game_title)
 	# move them into the correct y-axis position
-	button_container.position.y += 60
-	game_title.position.y -= 60
+	button_container.position.y -= 100
+	game_title.position.y -= 220
